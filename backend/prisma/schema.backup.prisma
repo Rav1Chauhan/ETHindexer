@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model binanceUsers {
+  id             Int     @id @default(autoincrement())
+  username       String?
+  password       String
+  depositAddress String
+  privateKey     String
+  balance        String
+}
